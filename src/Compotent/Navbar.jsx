@@ -1,5 +1,6 @@
 import React from "react";
-import { Github } from 'lucide-react';
+import { Github } from "lucide-react";
+import { Link } from "react-router";
 
 function Navbar() {
   return (
@@ -29,51 +30,65 @@ function Navbar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Item 1</a>
+                <Link className="text-lg text-gray-700 font-medium" to="/">
+                  Home
+                </Link>
               </li>
               <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+                <Link className="text-lg text-gray-700 font-medium" to="/app">
+                  Apps
+                </Link>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link
+                  className="text-lg text-gray-700 font-medium"
+                  to="/installation"
+                >
+                  Installation
+                </Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <div>
+            <Link
+            to="/"
+            className="btn  btn-ghost text-2xl text-[#9F62F2] font-bold"
+          >
+            HERO.IO
+          </Link>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+              <Link className="text-lg text-gray-700 font-medium" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
+              <Link className="text-lg text-gray-700 font-medium" to="/app">
+                Apps
+              </Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link
+                className="text-lg text-gray-700 font-medium"
+                to="/installation"
+              >
+                Installation
+              </Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a href="" className="btn bg-[#864CEC] text-white"> <Github /> Contribute</a>
+          <a
+            href="https://github.com/zoyan120dev/ph-Assignment-8"
+            target="_blank"
+            className="btn bg-[#864CEC] text-white"
+          >
+            {" "}
+            <Github /> Contribute
+          </a>
         </div>
       </div>
     </>
