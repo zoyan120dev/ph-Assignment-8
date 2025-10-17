@@ -5,7 +5,7 @@ import Footer from '../Compotent/Footer'
 
 function Root() {
   return (
-   <div className='flex flex-col min-h-screen container mx-auto'>
+   <div className='flex flex-col min-h-screen'>
       <Navbar/>
       <div className='flex-1'>
          <Outlet/>

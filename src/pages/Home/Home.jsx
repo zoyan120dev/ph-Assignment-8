@@ -1,8 +1,17 @@
 import React from 'react'
+import Banner from '../../Compotent/Banner'
+import Trusted from '../../Compotent/Trusted'
+import Products from '../../Compotent/Products'
 
 function Home() {
   return (
-    <div>Home</div>
+    <>
+      <div>
+        <Banner/>
+        <Trusted/>
+        <Products/>
+      </div>
+    </>
   )
 }
 

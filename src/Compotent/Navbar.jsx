@@ -5,7 +5,7 @@ import { Link } from "react-router";
 function Navbar() {
   return (
     <>
-      <div className="navbar">
+      <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,14 +49,14 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <div>
-            <Link
-            to="/"
+          <Link to='/' className="flex items-center">
+            <img className="w-[50px] h-[50px] object-cover" src="./logo.png" alt="" />
+            <h1
             className="btn  btn-ghost text-2xl text-[#9F62F2] font-bold"
           >
             HERO.IO
+          </h1>
           </Link>
-          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
