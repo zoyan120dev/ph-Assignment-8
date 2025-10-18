@@ -14,7 +14,7 @@ import {
 
 function AppDaitals() {
   const { id } = useParams();
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState([]);
   const [clikedButton, setCLikedButton] = useState(false);
 
   useEffect(() => {
@@ -32,7 +32,20 @@ function AppDaitals() {
   if (!product) return <p className="text-center my-10">Loading...</p>;
 
   const handelInstallButtton = () => {
-    setCLikedButton(true);
+    const existingList = JSON.parse(localStorage.getItem("install") || "[]");
+    let upDateInstallApp = [];
+    if (existingList) {
+      const someApp = existingList.some((p) => p.id === product.id);
+      if (someApp) {
+        return toast("This App All Ready installed");
+      }
+
+      upDateInstallApp = [...existingList, product];
+    } else {
+      upDateInstallApp.push(product);
+    }
+    localStorage.setItem("install", JSON.stringify(upDateInstallApp));
+     setCLikedButton(true);
     toast(`Yehoo 🐣! ${product.title} installed successfully 🎉`);
   };
 
@@ -55,7 +68,11 @@ function AppDaitals() {
 
           <div className="flex space-x-15 items-center mt-10 ml-6">
             <div className="flex flex-col space-y-1">
-               <img src="/public/icon-downloads.png" alt="" className="w-[30px] h-[30px] object-cover"/>
+              <img
+                src="/public/icon-downloads.png"
+                alt=""
+                className="w-[30px] h-[30px] object-cover"
+              />
               <p className="text-lg font-medium">Downloads</p>
               <span className="text-3xl md:text-5xl font-bold">
                 {product.downloads}
@@ -63,7 +80,11 @@ function AppDaitals() {
             </div>
 
             <div className="flex flex-col space-y-1">
-              <img src="/public/icon-ratings.png" alt="" className="w-[30px] h-[30px] object-cover"/>
+              <img
+                src="/public/icon-ratings.png"
+                alt=""
+                className="w-[30px] h-[30px] object-cover"
+              />
               <p className="text-lg font-medium">Average Ratings</p>
               <span className="text-3xl md:text-5xl font-bold">
                 {product.ratingAvg}
@@ -71,7 +92,11 @@ function AppDaitals() {
             </div>
 
             <div className="flex flex-col space-y-1">
-              <img src="/public/icon-review.png" alt="" className="w-[30px] h-[30px] object-cover" />
+              <img
+                src="/public/icon-review.png"
+                alt=""
+                className="w-[30px] h-[30px] object-cover"
+              />
               <p className="text-lg font-medium">Total Reviews</p>
               <span className="text-3xl md:text-5xl font-bold">
                 {product.reviews}
@@ -88,9 +113,7 @@ function AppDaitals() {
                 : "hover:opacity-90"
             }`}
           >
-            {clikedButton
-              ? "installed"
-              : `Install Now (${product.size}) MB`}
+            {clikedButton ? "installed" : `Install Now (${product.size}) MB`}
           </button>
         </div>
       </div>
