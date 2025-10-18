@@ -1,8 +1,11 @@
 import React from 'react'
+import AllProducts from '../../Compotent/AllProducts'
 
 function App() {
   return (
-    <div>App</div>
+    <div>
+      <AllProducts/>
+    </div>
   )
 }
 

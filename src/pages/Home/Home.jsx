@@ -6,7 +6,7 @@ import Products from '../../Compotent/Products'
 function Home() {
   return (
     <>
-      <div>
+      <div className=''>
         <Banner/>
         <Trusted/>
         <Products/>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Github } from "lucide-react";
 import { Link } from "react-router";
+import { House } from 'lucide-react';
 
 function Navbar() {
   return (
@@ -30,7 +31,7 @@ function Navbar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <Link className="text-lg text-gray-700 font-medium" to="/">
+                <Link className="text-lg  text-gray-700 font-medium" to="/">
                   Home
                 </Link>
               </li>
@@ -50,7 +51,7 @@ function Navbar() {
             </ul>
           </div>
           <Link to='/' className="flex items-center">
-            <img className="w-[50px] h-[50px] object-cover" src="./logo.png" alt="" />
+            <img className="w-[50px] h-[50px] object-cover" src="/public/logo.png" alt="" />
             <h1
             className="btn  btn-ghost text-2xl text-[#9F62F2] font-bold"
           >

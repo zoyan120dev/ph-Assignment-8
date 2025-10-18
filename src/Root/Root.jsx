@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../Compotent/Navbar'
 import { Outlet } from 'react-router'
 import Footer from '../Compotent/Footer'
+import { ToastContainer} from 'react-toastify';
 
 function Root() {
   return (
@@ -11,6 +12,10 @@ function Root() {
          <Outlet/>
       </div>
       <Footer/>
+      <ToastContainer
+       position='top-center'
+       autoClose={3000}
+      />
    </div>
   )
 }
