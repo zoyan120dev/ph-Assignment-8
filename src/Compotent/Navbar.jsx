@@ -51,7 +51,7 @@ function Navbar() {
             </ul>
           </div>
           <Link to='/' className="flex items-center">
-            <img className="w-[50px] h-[50px] object-cover" src="/public/logo.png" alt="" />
+            <img className="w-[50px] h-[50px] object-cover" src="../logo.png" alt="" />
             <h1
             className="btn  btn-ghost text-2xl text-[#9F62F2] font-bold"
           >

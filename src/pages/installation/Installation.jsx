@@ -68,7 +68,7 @@ function Installation() {
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2 text-green-400">
                       <img
-                        src="/public/icon-downloads.png"
+                        src="../icon-downloads.png"
                         alt=""
                         className="w-[20px] h-[20px]"
                       />
@@ -76,7 +76,7 @@ function Installation() {
                     </div>
                     <div className="flex items-center gap-2 text-orange-400">
                       <img
-                        src="/public/icon-ratings.png"
+                        src="../icon-ratings.png"
                         alt=""
                         className="w-[20px] h-[20px]"
                       />
@@ -84,7 +84,7 @@ function Installation() {
                     </div>
                     <div className="flex items-center gap-2 text-gray-400">
                       <img
-                        src="/public/icon-review.png"
+                        src="../icon-review.png"
                         alt=""
                         className="w-[20px] h-[20px]"
                       />

@@ -69,7 +69,7 @@ function AppDaitals() {
           <div className="flex space-x-15 items-center mt-10 ml-6">
             <div className="flex flex-col space-y-1">
               <img
-                src="/public/icon-downloads.png"
+                src="../icon-downloads.png"
                 alt=""
                 className="w-[30px] h-[30px] object-cover"
               />
@@ -81,7 +81,7 @@ function AppDaitals() {
 
             <div className="flex flex-col space-y-1">
               <img
-                src="/public/icon-ratings.png"
+                src="../icon-ratings.png"
                 alt=""
                 className="w-[30px] h-[30px] object-cover"
               />
@@ -93,7 +93,7 @@ function AppDaitals() {
 
             <div className="flex flex-col space-y-1">
               <img
-                src="/public/icon-review.png"
+                src="../icon-review.png"
                 alt=""
                 className="w-[30px] h-[30px] object-cover"
               />
